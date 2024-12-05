@@ -1,0 +1,35 @@
+{
+  "name": "llenon/payments-efi",
+  "description": "A PHP package for payment handling.",
+  "type": "library",
+  "version": "1.0.0",
+  "autoload": {
+    "psr-4": {
+      "LLenon\\Payments\\Efi\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "symfony/http-client": "7.2.*",
+    "symfony/dotenv": "^7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0",
+    "symfony/flex": "2.4.*",
+    "symfony/var-dumper": "^7.2"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lucyann Lenon",
+      "email": "lucyann.lenon@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "symfony/flex": true
+    }
+  }
+}
