@@ -94,4 +94,12 @@ class EfiConnection
         ]);
         return $request->toArray();
     }
+
+    public function pixResendWebhook(array $body):array
+    {
+        $request = $this->httpClient->request('PUT', '/v2/gn/webhook/reenviar', [
+            'json' => $body
+        ]);
+        return $request->toArray();
+    }
 }
