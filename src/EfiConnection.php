@@ -95,11 +95,14 @@ class EfiConnection
         return $request->toArray();
     }
 
-    public function pixResendWebhook(array $body):array
+    public function pixResendWebhook(array $body): bool
     {
         $request = $this->httpClient->request('POST', '/v2/gn/webhook/reenviar', [
             'json' => $body
         ]);
-        return $request->toArray();
+        if ($request->getStatusCode() == 202) {
+            return true;
+        }
+        return false;
     }
 }
